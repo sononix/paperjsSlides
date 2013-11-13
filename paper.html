@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper.js/dist/paper.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	
+var rectangle = new Rectangle(200, 200, 50, 100);
+//another way new Rectangle(point1, point2) constructor, which receives two corner points of the Rectangle object
+//var rectangle = new Rectangle(new Point(200, 200), new Point(50, 100));
+
+rectangle.x = 200;
+
+
+var path = new Path.Rectangle(rectangle);
+path.fillColor = '#ff4b69';
+// path.rotate(45);
+
+
+console.log(rectangle); // { x: 200, y: 200, width: 50, height: 100 }
+console.log(new Point(100,100))
+//path.selected = true;
+
+
+//********************************
+function onFrame(event) {
+    // Each frame, rotate the copy by 1 degree:
+    path.rotate(1);
+}
+//********************************
+
+
+//********************************
+//real power comes when grouping object and forming 'layers'
+
+//********************************
+
+
+//********************************
+
+//********************************
+
+
+	
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+</body>
+</html>

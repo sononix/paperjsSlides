@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper.js/dist/paper.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+    // Create a Paper.js Path to draw a line into it
+
+
+var layer1 = new Layer();
+var path1 = new Path.Circle(new Point(300, 200), 50);
+path1.fillColor = 'blue';
+
+// Create a new layer:
+var layer2 = new Layer();
+
+// The second path is added as a child of the second layer:
+var path2 = new Path.Circle(new Point(300, 300), 50);
+path2.fillColor = 'red';
+
+var layer3 = new Layer();
+    var path3a = new Path.Circle(new Point(400, 100), 25);
+    path3a.fillColor = 'green';
+    var path3b = new Path.Circle(new Point(400, 150), 25);
+    path3b.fillColor = 'green';
+    var path3c = new Path.Circle(new Point(400, 200), 25);
+    path3c.fillColor = 'green';
+    var path3d = new Path.Circle(new Point(400, 250), 25);
+    path3d.fillColor = 'green';
+    var path3e = new Path.Circle(new Point(400, 300), 25);
+    path3e.fillColor = 'green';
+
+layer1.visible = true;
+layer2.visible = true;
+layer3.visible = true;
+
+//console.log(project.activeLayer.children.length);
+console.log(layer2.children.length);
+
+
+var count = layer3.children.length;
+for (var i = 0; i < count; i++) {
+    console.log(i);
+
+}
+
+// function onFrame(event) {
+//     var count = layer3.children.length;
+//     for (var i = 0; i < count; i++) {
+//             //console.log(layer3.children[i].position);
+//             layer3.children[i].position.x += i;
+
+//         if (layer3.children[i].position.x > view.size.width) {
+//             layer3.children[i].position.x = 0;
+//         }
+//     }
+
+
+// }
+
+
+
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+</body>
+</html>
